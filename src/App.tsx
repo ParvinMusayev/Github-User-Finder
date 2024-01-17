@@ -1,7 +1,7 @@
 import React from "react";
 import { defaultUser } from "./types";
 import { IGithubUser } from "./types/user";
-import { Container } from "./components";
+import { Container, Header } from "./components";
 
 
 const App: React.FC = () => {
@@ -11,9 +11,8 @@ const App: React.FC = () => {
 
   return (
     <Container>
-      <div>
-        Hello
-      </div>
+      <Header />
+      
     </Container>
   );
 };
