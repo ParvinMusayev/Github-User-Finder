@@ -2,7 +2,7 @@ import React from "react";
 
 //style
 import css from "./Header.module.scss";
-import { ThemeSwitcher } from "../index";
+import ThemeSwitcher from "../ThemeSwitcher"
 
 const Header: React.FC = () => {
   return (
