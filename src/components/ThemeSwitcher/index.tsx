@@ -1,6 +1,10 @@
 import React from "react";
-import styles from "./ThemeSwitcher.module.scss";
 
+//style
+import css from "./ThemeSwitcher.module.scss";
+
+
+//icons
 import { ReactComponent as MoonIcon } from "../../assets/icon-moon.svg";
 import { ReactComponent as SunIcon } from "../../assets/icon-sun.svg";
 
@@ -14,9 +18,9 @@ const ThemeSwitcher: React.FC = () => {
    }, [isDark]);
 
   return (
-    <div className={styles.switcher} onClick={() => setDark(!isDark)}>
+    <div className={css.switcher} onClick={() => setDark(!isDark)}>
       <span>{themeText}</span>
-      <ThemeIcon className={styles.icon} />
+      <ThemeIcon className={css.icon} />
     </div>
   );
 };
