@@ -15,8 +15,13 @@ interface ISearchProps {
 }
 
 const Search: React.FC<ISearchProps> = ({ hasError, onSubmit }) => {
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <div className={css.search}>
                 <label htmlFor="search" className={css.label}>
                     <SearchIcon />

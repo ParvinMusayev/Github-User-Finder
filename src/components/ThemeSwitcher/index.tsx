@@ -3,7 +3,6 @@ import React from "react";
 //style
 import css from "./ThemeSwitcher.module.scss";
 
-
 //icons
 import { ReactComponent as MoonIcon } from "../../assets/icon-moon.svg";
 import { ReactComponent as SunIcon } from "../../assets/icon-sun.svg";
