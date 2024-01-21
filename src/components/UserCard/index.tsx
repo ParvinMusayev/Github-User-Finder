@@ -29,7 +29,11 @@ const UserCard: React.FC<IGithubUser> = (props) => {
       <img src={avatar_url} alt={login} className={css.avatar} />
       <UserTitle created_at={created_at} login={login} name={name} />
       <p className={css.userBio}>{bio || "This profile has no bio"}</p>
-      <UserStat />
+      <UserStat 
+          public_repos={public_repos}
+          followers={followers}
+          following={following}
+      />
       <UserInfo />
     </div>
   );
