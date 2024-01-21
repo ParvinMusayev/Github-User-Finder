@@ -13,7 +13,7 @@ const App: React.FC = () => {
     <Container>
       <Header />
       <Search />
-      <UserCard />
+      {user && <UserCard {...user}/>}
     </Container>
   );
 };

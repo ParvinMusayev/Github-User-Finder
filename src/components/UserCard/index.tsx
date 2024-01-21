@@ -26,9 +26,9 @@ const UserCard: React.FC<IGithubUser> = (props) => {
 
   return (
     <div className={css.userCard}>
-      <img src="" alt="" className={css.avatar} />
-      <UserTitle />
-      <p className={css.userBio}>Profile Bio</p>
+      <img src={avatar_url} alt={login} className={css.avatar} />
+      <UserTitle created_at={created_at} login={login} name={name} />
+      <p className={css.userBio}>{bio || "This profile has no bio"}</p>
       <UserStat />
       <UserInfo />
     </div>
