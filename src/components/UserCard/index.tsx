@@ -34,7 +34,12 @@ const UserCard: React.FC<IGithubUser> = (props) => {
           followers={followers}
           following={following}
       />
-      <UserInfo />
+      <UserInfo
+      blog={blog}
+      company={company}
+      location={location}
+      twitter_username={twitter_username}
+      />
     </div>
   );
 };
