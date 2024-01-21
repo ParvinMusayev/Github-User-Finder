@@ -1,9 +1,9 @@
 import React from 'react'
 
-const index = () => {
+const UserStat:React.FC = () => {
   return (
     <div>index</div>
   )
 }
 
-export default index
+export default UserStat;

@@ -1,7 +1,7 @@
 import React from "react";
 import { defaultUser } from "./types";
 import { IGithubUser } from "./types/user";
-import { Container, Header, Search } from "./components";
+import { Container, Header, Search, UserCard } from "./components";
 
 
 const App: React.FC = () => {
@@ -13,6 +13,7 @@ const App: React.FC = () => {
     <Container>
       <Header />
       <Search />
+      <UserCard />
     </Container>
   );
 };

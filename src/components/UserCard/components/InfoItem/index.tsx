@@ -1,9 +1,9 @@
 import React from 'react'
 
-const index = () => {
+const InfoItem:React.FC = () => {
   return (
-    <div>index</div>
+    <div>InfoItem</div>
   )
 }
 
-export default index
+export default InfoItem
