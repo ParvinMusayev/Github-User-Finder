@@ -16,8 +16,15 @@ interface ISearchProps {
 
 const Search: React.FC<ISearchProps> = ({ hasError, onSubmit }) => {
 
+    const [userName, setUserName] = React.useState<string>("")
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        if(userName.trim()){
+            onSubmit(userName)
+            setUserName("")
+        }
     }
 
     return (
@@ -32,6 +39,8 @@ const Search: React.FC<ISearchProps> = ({ hasError, onSubmit }) => {
                     id="search"
                     name="username"
                     placeholder="Search Github username"
+                    value={userName}
+                    onChange={(e)=> setUserName(e.target.value)}
                 />
 
                 {hasError && <div className={css.error}>No result</div>}
