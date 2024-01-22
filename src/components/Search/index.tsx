@@ -11,7 +11,7 @@ import { Button } from "../index";
 
 interface ISearchProps {
     hasError?: boolean;
-    onSubmit?: (text: string) => void;
+    onSubmit: (text: string) => void;
 }
 
 const Search: React.FC<ISearchProps> = ({ hasError, onSubmit }) => {

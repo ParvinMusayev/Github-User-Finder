@@ -2,8 +2,10 @@ import React from "react";
 import { defaultUser } from "./types";
 import { IGithubUser } from "./types/user";
 import { Container, Header, Search, UserCard } from "./components";
+import { isGithubUser } from "./utils/typeGuards";
+import { extractLocalUser } from "./utils/extractLocalUser";
 
-const BASE_URL = "https://api.github.com/users"
+const BASE_URL = "https://api.github.com/users/"
 
 const App: React.FC = () => {
   const [user, setUser] = React.useState<IGithubUser | null>(defaultUser);
@@ -15,13 +17,18 @@ const App: React.FC = () => {
 
     const user = (await res.json()) as IGithubUser;
 
+    if (isGithubUser(user)) {
+      setUser(extractLocalUser(user));
+    } else {
+      setUser(null);
+    }
    
   };
 
   return (
     <Container>
       <Header />
-      <Search onSubmit={fetchUser} />
+      <Search hasError={!user} onSubmit={fetchUser} />
       {user && <UserCard {...user}/>}
     </Container>
   );
